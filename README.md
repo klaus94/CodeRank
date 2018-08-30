@@ -11,3 +11,7 @@
 - Python
 - neo4j
 - Graphik-Bibliothek ???
+
+
+
+Related work: https://ieeexplore.ieee.org/document/7208254/
