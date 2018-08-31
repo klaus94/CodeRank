@@ -13,6 +13,6 @@ def drawEdge(nodeFrom, nodeTo):
 
 def buildGraph(nodesDict):
 	for node in nodesDict.values():
-		graph.run("CREATE (n:Node {name:'" + node.entity + "', path:'" + node.filePath + "'}) RETURN n")
+		graph.run("CREATE (n:Node {name:'" + node.name + "', path:'" + node.filePath + "'}) RETURN n")
 		for depNode in node.deps:
-			drawEdge(node.entity, depNode)
+			drawEdge(node.name, depNode)

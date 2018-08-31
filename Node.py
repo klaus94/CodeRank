@@ -2,14 +2,13 @@
 # -*- coding : utf -8 -*-
 
 class Node(object):
-	def __init__(self, name, entity, filePath):
+	def __init__(self, name, filePath):
 		self.name = name
-		self.entity = entity
 		self.filePath = filePath
 		self.deps = []
 
 	def __repr__(self):
-		return self.name + ": " + self.entity + " " + str(self.deps)
+		return self.name + " (" + self.filePath + ") : " + str(self.deps)
 
 	def __eq__(self, other):
 		return self.name == other.name
