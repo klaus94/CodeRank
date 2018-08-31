@@ -33,7 +33,9 @@ Ablauf:
 
 > \> CALL algo.pageRank('Node', 'DEP', {iterations:5, dampingFactor:0.85, write: true, writeProperty:'pagerank', concurrency:4})
 
+- mittels der folgenden Abfrage kann anschließend der Graph auf die interessanten Knoten eingeschränkt werden:
 
+> \> match (n:Node) where n.pagerank>0.2 return n;
 
 TODO:
 
